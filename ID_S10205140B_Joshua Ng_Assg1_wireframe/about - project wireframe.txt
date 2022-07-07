@@ -1,0 +1,5 @@
+Screen1 - Main Screen
+Screen2 - Specialists page
+Screen3 - Battlefield news page
+
+The page will probably be more detailed, but for now its a wireframe

@@ -1,0 +1,523 @@
+/* ====================================== */
+/* mainpage.html */
+/* ====================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Battlefield Font';
+    src: url('resources/built-titling.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Battlefield Font Header';
+    src: url('resources/built titling rg.ttf') format('truetype');
+}
+
+.flex-header {
+    user-select: none;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+.flex-left {
+    cursor: pointer;
+    font-family: 'Battlefield Font Header';
+    letter-spacing: 3px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: center;
+    margin: 10px 25px 10px 38px;
+    height: 25px;
+}
+
+.flex-right {
+    cursor: pointer;
+    font-family: 'Battlefield Font Header';
+    letter-spacing: 2px;
+    white-space: nowrap;
+    margin: 10px 38px 10px auto;
+    height: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1;
+    user-select: none;
+    position: absolute;
+    border-radius: 4px;
+    min-width: 160px;
+    text-align: left;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(39, 39, 39);
+    font-size: 23px;
+}
+
+.flex-left:hover .dropdown-content {
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-content > p {
+    transition: 0.2s ease;
+    border-radius: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.dropdown-content > p:hover {
+    background-color: rgb(2, 230, 230);
+}
+
+.video-front-page {
+    user-select: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100%;
+    height: 30%;
+}
+
+.video-container video {
+    mix-blend-mode: overlay;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    justify-content: center;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.game-header {
+    position: absolute;
+    justify-content: center;
+    width: 36%;
+    margin-top: 10%;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+
+.game-desc {
+    position: absolute;
+    text-align: center;
+    width: 46%;
+    margin-top: 22.3%;
+    margin-left: 27%;
+    margin-right: 27%;
+    color: white;
+    font-size: 18.6px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-buy-border {
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 28.5%;
+    white-space: nowrap;
+    width: 15%;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    border-radius: 8px;
+    transition: 0.36s ease;
+    background-color: orange;
+}
+
+.game-buy-border:hover {
+    background-color: rgb(187, 121, 0);
+}
+
+.image-slideshow {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 75%;
+    background-color: rgb(27, 27, 27);
+}
+
+.slide {
+    background-color: rgb(39, 39, 39);
+    user-select: none;
+    display: none;
+}
+
+.slide-battlefield-2042 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('resources/battlefield-2042.jpg');
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slide-battlefield-2042-header {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    color: rgb(49, 228, 228);
+    font-size: 95px;
+    font-family: 'Battlefield Font Header';
+    line-height: 70%;
+}
+
+.slide-battlefield-2042-desc {
+    position: absolute;
+    width: 64%;
+    top: 39%;
+    margin-left: 18%;
+    margin-right: 18%;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.slide-battlefield-2042-game-overview {
+    user-select: none;
+    cursor: pointer;
+    background-color: orange;
+    position: absolute;
+    top: 64%;
+    font-size: 30px;
+    width: 15%;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.36s ease;
+}
+
+.slide-battlefield-2042-game-overview:hover {
+    background-color: rgb(187, 121, 0);
+    border-color: rgb(204, 204, 204);
+}
+
+.slide-battlefield-gamemode-image {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slide-battlefield-gamemode-desc {
+    position: absolute;
+    width: 56%;
+    top: 39%;
+    margin-left: 22%;
+    margin-right: 22%;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.register-news {
+    background-color: black;
+    color: white;
+    position: absolute;
+    height: 9%;
+    width: 100%;
+    font-family: 'Battlefield Font Header';
+    font-size: 45px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.register-news:hover {
+    color: rgb(23, 219, 219);
+}
+
+/* ====================================== */
+/* signup.html */
+/* ====================================== */
+
+@font-face {
+    font-family: 'Rock Font';
+    src: url('resources/ROCK.TTF') format('truetype');
+}
+
+.signup-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('resources/battlefieldfrontpage.jpg');
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-page {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(43, 43, 43);
+}
+
+.signup-portion {
+    position: absolute;
+    width: 100%;
+    top: 28%;
+    height: 60%;
+}
+
+.signup-header {
+    font-family: 'Rock Font';
+    position: absolute;
+    width: 100%;
+    top: 6%;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+.signup {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 28%;
+    margin-left: 23%;
+    font-size: 27px;
+    font-family: 'Rock Font';
+}
+
+.signup > label {
+    margin-top: 8px;
+    color:white;
+    font-size: 23px;
+}
+
+input[type=text], input[type=password], select {
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 130%;
+    padding: 2px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(187, 187, 187);
+    border-radius: 6px;
+    font-size: 23px;
+}
+
+input[type=submit] {
+    width: 130%;
+    margin-top: 9%;
+    background-color: rgb(45, 45, 248);
+    border: 2px solid rgb(45, 45, 248);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(28, 28, 131);
+}
+
+/* ====================================== */
+/* specialistspage.html */
+/* ====================================== */
+
+.specialists-page {
+    position: absolute;
+    width: 100%;
+    height: 186%;
+    background-image: url("resources/battlefieldbackground.jpg");
+}
+
+.specialists-desc {
+    position: absolute;
+    width: 60%;
+    height: 21%;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 3%;
+    text-align: center;
+    color: white;
+}
+
+.specialists-desc-header {
+    font-size: 85px;
+    font-family: 'Battlefield Font Header';
+}
+
+.specialists-desc-body {
+    margin-top: 20px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.specialists-section {
+    position: absolute;
+    width: 80%;
+    height: 7%;
+    margin-left: 10%; 
+    margin-right: 10%;
+    top: 41%;
+    font-size: 85px;
+    font-family: 'Battlefield Font Header';
+    text-align: center;
+    color: white;
+}
+
+.specialists-section-slideshow {
+    position: absolute;
+    width: 100%;
+    height: 37%;
+    top: 52%;
+}
+
+.specialists {
+    display: none;
+    position: absolute;
+    width: 21%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.specialists-profile-image {
+    position: absolute;
+    width: 100%;
+    height: 69%;
+    top: 0%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.specialists-nametag {
+    position: absolute;
+    width: 100%;
+    height: 31%;
+    bottom: 0%;
+    background-color: cyan;
+    color: black;
+}
+
+.specialists-nametag-header {
+    font-family: 'Battlefield Font Header';
+    position: absolute;
+    top: 15%;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.specialists-preview-button {
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 13%;
+    width: 55%;
+    height: 38%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6%;
+    border: 3px solid black;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.specialists-preview-button:hover {
+    background-color: rgb(66, 255, 255);
+    color: white;
+    border-color: white;
+    box-shadow: 4px;
+}
+
+.specialist-bio {
+    display: none; 
+    position: absolute;
+    width: 100%;
+    height: 62%;
+    top: 100%;
+}
+
+.specialists-image {
+    display: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.specialists-bio-name {
+    font-family: 'Battlefield Font Header';
+    position: absolute;
+    font-size: 85px;
+    top: 10%;
+    left: 6%;
+    width: 40%;
+    text-align: left;
+    color: white;
+}
